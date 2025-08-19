@@ -1,0 +1,64 @@
+/* exit.css */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.container {
+  max-width: 90%;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 15px;
+}
+
+p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+  line-height: 1.4;
+}
+
+button {
+  padding: 15px 30px;
+  font-size: 1.1em;
+  border: none;
+  border-radius: 10px;
+  background-color: #fff;
+  color: #2575fc;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+  width: 100%;
+  max-width: 300px;
+}
+
+button:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.05);
+}
+
+/* 📱 Mobile tweaks */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.6em;
+  }
+
+  p {
+    font-size: 1em;
+  }
+
+  button {
+    padding: 14px;
+    font-size: 1em;
+  }
+}

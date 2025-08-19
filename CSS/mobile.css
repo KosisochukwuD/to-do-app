@@ -1,0 +1,75 @@
+@media (max-width: 768px) {
+  body {
+    background: #f9f9fb;
+  }
+
+  header {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+  }
+
+  header h1 {
+    font-size: 1.2em;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .sub_container {
+    flex-direction: column;
+    padding: 10px;
+    gap: 15px;
+  }
+
+  .addtask, .task {
+    width: 100%;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 15px;
+  }
+
+  form input,
+  form textarea,
+  form #date {
+    width: 100%;
+    padding: 14px;
+    font-size: 1em;
+    border-radius: 8px;
+  }
+
+  .addtask button {
+    width: 100%;
+    padding: 14px;
+    font-size: 1.1em;
+    border-radius: 8px;
+  }
+
+  .task ul li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .task ul li div:last-child {
+    align-self: flex-end;
+    display: flex;
+    gap: 10px;
+  }
+
+  .complete {
+    font-size: 0.9em;
+    padding: 8px 10px;
+  }
+
+  .delete {
+    font-size: 1.4em;
+  }
+
+  .completed h1 {
+    font-size: 1em;
+  }
+}
