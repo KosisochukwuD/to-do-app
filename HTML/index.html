@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/index.css">
+</head>
+<body>
+    <div class="container">
+
+        <header>
+            <h1>To do app</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#contact">Exit</a></li>
+                </ul>
+            </nav>
+        </header>
+
+<div class="sub_container">
+
+     <div class="addtask">
+        
+       <form action="get" >
+          
+           <input type="text" class="inp-title" placeholder="title" id="title" ><br>
+           <textarea type="text" class="description" placeholder="Enter your description here" id="description"></textarea><br>
+            <input type="datetime-local" id="date"><br> 
+              <button type="submit">add task</button>
+       </form>
+     
+     </div>
+     <div class="task">
+           <ul>
+            
+              
+           </ul>
+     </div>
+
+</div>   
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script src="../JS/index.js"></script>
+</body>
+</html>

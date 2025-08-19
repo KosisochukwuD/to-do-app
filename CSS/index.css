@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    height: 100vh;
+    width: 100%;
+    background-color: #ffffff;
+    
+}
+header{
+    height: fit-content;
+    background-color: #5941ff;
+    display:flex;
+    justify-content: space-between;
+    padding: 20px;
+    color: #ffffff;
+
+}
+header h1{
+    background-color: #c8ff16;
+    padding:10px 20px;
+    color:#5941ff;
+    border-radius:40px ;
+}
+ul{
+    display: flex;
+    color:white;
+    justify-content: space-between;
+    text-decoration: none;
+    list-style-type: none;
+}
+li{
+    margin: 20px ;
+}
+a{
+    color:white;
+    text-decoration: none;
+}
+.addtask , .task{
+    height: 90vh;
+    width: 70%;
+    box-shadow: 0 4px 20px #00000025;
+    margin:10px;
+}
+.task:hover{
+    box-shadow: 0 4px 20px #00000042;  
+}
+.addtask{
+    width:30%;
+    text-align: center;
+    box-shadow: none;
+}
+.sub_container{
+    display: flex;
+}
+.addtask button{
+    padding:20px 95px;
+    color:#ffffff;
+    background:#5941ff;
+    border-radius: 5px;
+    text-transform: capitalize;
+    cursor: pointer;
+    border: none;
+}
+.addtask button:hover{
+    background-color: #3113f3;
+    color: #ffffff;
+}
+form{
+    margin: 70px 0px;
+}
+form input , .description{
+    padding:20px;
+    margin: 10px 0;
+    border: none;
+    background-color: #0000001a;
+    border-radius: 5px;
+}
+.inp-title ,.description{
+    padding:20px 35px;
+    outline-color: #9c9c9ce3;
+}
+.description{
+     height: 100px;
+}
+.task ul li div:first-child{
+    box-shadow: 0 4px 5px #00000018;
+    width: 90%;
+    color: #8b5cf6;
+    padding:20px;
+    border-radius:10px ;
+    font-size: 1em;
+    background-color: #edf0f2;
+   
+}
+.task ul li div:last-child{
+    display: flex;
+    align-items: center;
+   margin: 10px;
+   
+   
+}
+.delete{
+    color: #3f3e3e;
+    font-size: 1.5em;
+    padding:10px;
+    cursor: pointer;
+}
+.task ul{
+flex-direction: column;
+}
+.complete{
+    background-color: #5941ff;
+    padding:10px;
+    border:none;
+    border-radius:5px;
+    cursor: pointer;
+}
+.completed h1{
+    color: #3f3e3e;
+}
+li  h3,p,span{
+    padding:10px;
+    font-size: 1.2em;
+    color: #3f3e3e;
+}
+li h3{
+    padding:0 10px;
+}
+li h3::before{
+    content: "📢";
+
+
+
+
+}
+li span::before{
+    content: "📅";
+    
+}
+li p::before{
+    content: "📝";
+
+}
