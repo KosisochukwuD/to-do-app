@@ -20,7 +20,14 @@
                 </ul>
             </nav>
         </header>
-
+<div id="overlay" class="overlay" ></div>
+<div class="popup" id="popup">
+    <p>This action can't be undone</p>
+    <div class="div">
+        <span id="cancel">cancel</span>
+        <span id="del">delete</span>
+    </div>
+</div>
 <div class="sub_container">
 
      <div class="addtask">
@@ -31,7 +38,7 @@
            <textarea type="text" class="description" placeholder="Enter your description here" id="description"></textarea><br>
             <input type="text" id="date"
              onfocus="this.type='datetime-local'"
-             onmouseleave="this.type='text'" placeholder='dd/mm/yy'><br> 
+              placeholder='dd/mm/yy'><br> 
               <button type="submit">add task</button>
        </form>
      

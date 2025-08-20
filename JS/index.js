@@ -3,7 +3,10 @@ const descriptioninp = document.getElementById('description')
 const dateinp = document.getElementById('date')
 const form = document.querySelector('form')
 const taskList = document.querySelector(".task ul");
-
+const popup = document.getElementById('popup')
+const cancel = document.getElementById('cancel')
+const deleteBtn = document.getElementById('del')
+const overlay = document.getElementById('overlay')
 form.addEventListener("submit", (e) =>{
     e.preventDefault();
 
@@ -34,11 +37,11 @@ form.addEventListener("submit", (e) =>{
 });
 
 function addTaskToDOM(todo) {
- let li= document.createElement('li');
- li.dataset.id = todo.id;
+    let li= document.createElement('li');
+    li.dataset.id = todo.id;
 
  // ✅ check if completed already
- li.innerHTML = todo.completed
+    li.innerHTML = todo.completed
    ? `<div class='completed'><h1 style='color:black;'>completed</h1></div>
       <div><ion-icon name="close-circle-outline" class='delete'></ion-icon></div>`
    : `<div>
@@ -59,19 +62,36 @@ function addTaskToDOM(todo) {
         li.innerHTML = `<div class='completed'><h1 style='color:black;'>completed</h1></div>
                         <div><ion-icon name="close-circle-outline" class='delete'></ion-icon></div>`;
         li.querySelector('.delete').addEventListener("click",()=>{
-          li.remove();
-          removeTaskFromLocalStorage(todo.id);
+                                 li.remove();
+                    removeTaskFromLocalStorage(todo.id);
         });
      });
    }
 
-   // delete button
-   li.querySelector('.delete').addEventListener("click",()=>{
-    li.remove();
-    removeTaskFromLocalStorage(todo.id);
-   })
+    li.querySelector('.delete').addEventListener("click",()=>{
+              popup.style.display = 'block'
+               overlay.style.display = 'flex'
+        deleteBtn.addEventListener('click', ()=>{
+                    popup.style.display = 'none'
+                    li.remove();
+                    removeTaskFromLocalStorage(todo.id);
+                        overlay.style.display = 'none'
+              })
+        overlay.addEventListener('click',()=>{
+           overlay.style.display='none'
+                    popup.style.display = 'none'
 
- taskList.appendChild(li);
+        })  
+          cancel.addEventListener('click',()=>{
+            overlay.style.display='none'
+                    popup.style.display = 'none'
+          })
+        }); 
+         
+          
+     
+
+           taskList.appendChild(li);
 }
 
 function saveTaskToLocalStorage(todo) {
