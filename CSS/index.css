@@ -188,3 +188,7 @@ form #date {
   color: #444;
   text-align: center;
 }
+.task ul li div:last-child{
+    display: flex;
+    align-items: center;
+}
